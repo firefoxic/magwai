@@ -1,0 +1,80 @@
+.Hero {
+	position: relative;
+	display: block grid;
+	grid-template-areas: "hero";
+	grid-template-columns: [image-start text-start] 1fr [text-end image-end];
+	grid-template-rows: [image-start] 1fr [text-start] auto [text-end image-end];
+
+	&::after {
+		content: "";
+		grid-area: text;
+		background: linear-gradient(transparent 0%, var(--ColorUI-BG) 100%);
+	}
+}
+
+.Hero-Container {
+	--TextLength: 286px;
+	z-index: 1;
+	grid-area: text;
+	align-self: end;
+	display: block grid;
+	gap: 40px;
+	padding-block: 52px;
+
+	@media (--not-small) {
+		--TextLength: 486px;
+		padding-inline: 10px;
+		padding-block: 124px 76px;
+	}
+
+	@media (--only-large) {
+		--TextLength: 686px;
+		padding-inline: 0;
+		padding-block: 158px 76px;
+	}
+}
+
+.Hero-Title {
+	margin: 0;
+	max-inline-size: var(--TextLength);
+	line-height: normal;
+	font-size: 20px;
+	font-weight: 700;
+	text-transform: uppercase;
+
+	@media (--not-small) {
+		font-size: 38px;
+	}
+
+	@media (--only-large) {
+		font-size: 42px;
+	}
+}
+
+.Hero-Description {
+	max-inline-size: var(--TextLength);
+	line-height: 1.5;
+	font-size: 14px;
+	font-weight: 400;
+	opacity: 0.79;
+
+	@media (--not-small) {
+		font-size: 16px;
+	}
+}
+
+.Hero-Image {
+	grid-area: image;
+	display: block flow-root;
+	inline-size: 100%;
+	block-size: auto;
+	max-block-size: 907px;
+	object-fit: cover;
+	border-start-start-radius: 30px;
+	border-start-end-radius: 30px;
+
+	@media (--not-small) {
+		border-start-start-radius: 60px;
+		border-start-end-radius: 60px;
+	}
+}
