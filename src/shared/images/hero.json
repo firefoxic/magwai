@@ -1,0 +1,38 @@
+{
+	"maxDensity": 2,
+	"formats": [
+		"avif",
+		"webp"
+	],
+	"sizes": [
+		{
+			"width": 1920,
+			"height": 1033,
+			"breakpoint": 1920
+		},
+		{
+			"width": 768,
+			"height": 907,
+			"breakpoint": 768
+		},
+		{
+			"width": 360,
+			"height": 495,
+			"breakpoint": 360
+		}
+	],
+	"paths": [
+		"./hero-1920@2x.avif",
+		"./hero-1920@1x.avif",
+		"./hero-1920@2x.webp",
+		"./hero-1920@1x.webp",
+		"./hero-360@2x.avif",
+		"./hero-360@1x.avif",
+		"./hero-360@2x.webp",
+		"./hero-360@1x.webp",
+		"./hero-768@2x.avif",
+		"./hero-768@1x.avif",
+		"./hero-768@2x.webp",
+		"./hero-768@1x.webp"
+	]
+}

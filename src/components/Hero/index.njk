@@ -1,0 +1,10 @@
+{% macro Hero(classes, centererClass) %}
+	<section class="{{ classes }} Hero">
+		<div class="{{ centererClass }}">
+			<h2 class="Hero-Title">Полет Илона Маска и DOGIE COIN</h2>
+			<p class="Hero-Description">В прошлый четверг все офигели от полета DOGIE COIN на марс.</p>
+			<a href="javascript:void(0)" class="Button">Оставить заявку</a>
+		</div>
+		{{ Picture("hero", { class: "Hero-Image", loading: "lazy", alt: "Вид из космоса на ночную сторону Земли" }) }}
+	</section>
+{% endmacro %}
