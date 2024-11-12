@@ -1,6 +1,6 @@
 {
-	"name": "project-template-gulp-nunjucks",
-	"description": "Project template based on Gulp and Nunjucks.",
+	"name": "magwai",
+	"description": "Тестовое задание для Magwai",
 	"icons": [
 		{
 			"src": "./favicons/icon-192.png",
