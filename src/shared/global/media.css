@@ -1,6 +1,6 @@
-@custom-media --not-small (width >= 640px);
-@custom-media --not-middle (width < 640px) and (width >= 1280px);
-@custom-media --not-large (width < 1280px);
-@custom-media --only-small (width < 640px);
-@custom-media --only-middle (640px <= width < 1280px);
-@custom-media --only-large (width >= 1280px);
+@custom-media --not-small (width >= 768px);
+@custom-media --not-middle (width < 768px) and (width >= 1920px);
+@custom-media --not-large (width < 1920px);
+@custom-media --only-small (width < 768px);
+@custom-media --only-middle (768px <= width < 1920px);
+@custom-media --only-large (width >= 1920px);
