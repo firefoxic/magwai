@@ -1,0 +1,11 @@
+@property --Icon_shape_menu {
+	syntax: "<url>";
+	inherits: false;
+	initial-value: url("./menu.svg");
+}
+
+@property --Icon_shape_phone {
+	syntax: "<url>";
+	inherits: false;
+	initial-value: url("./phone.svg");
+}

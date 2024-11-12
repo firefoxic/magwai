@@ -1,5 +1,6 @@
 /* @import "../shared/outline.css" layer(outline); */
 @import "../shared/fonts/index.css";
+@import "../shared/icons/index.css";
 @import "../shared/global/media.css";
 @import "../shared/global/motion.css";
 @import "../shared/global/scroll-lock.css";
