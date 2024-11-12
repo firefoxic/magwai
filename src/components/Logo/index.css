@@ -6,6 +6,11 @@
 
 .Logo-Image {
 	display: block flow-root;
-	block-size: 2lh;
-	inline-size: auto;
+	block-size: 40px;
+	inline-size: 106px;
+
+	@media (width >= 768px) {
+		block-size: 60px;
+		inline-size: 159px;
+	}
 }
