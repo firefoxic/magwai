@@ -1,0 +1,12 @@
+{
+	"navLinks": [
+		{
+			"text": "Main page",
+			"rootUrl": "/"
+		},
+		{
+			"text": "Lost page",
+			"rootUrl": "/lost"
+		}
+	]
+}
