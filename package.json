@@ -21,8 +21,8 @@
 	},
 	"packageManager": "pnpm@9.12.3",
 	"dependencies": {
-		"@fontsource-variable/roboto-flex": "^5.1.0",
-		"@fontsource-variable/roboto-mono": "^5.1.0"
+		"@fontsource-variable/montserrat": "^5.1.0",
+		"@fontsource-variable/mulish": "^5.1.0"
 	},
 	"scripts": {
 		"prepare": "git config core.hooksPath .git-hooks || true",

@@ -8,10 +8,10 @@ importers:
 
   .:
     dependencies:
-      '@fontsource-variable/roboto-flex':
+      '@fontsource-variable/montserrat':
         specifier: ^5.1.0
         version: 5.1.0
-      '@fontsource-variable/roboto-mono':
+      '@fontsource-variable/mulish':
         specifier: ^5.1.0
         version: 5.1.0
     devDependencies:
@@ -310,11 +310,11 @@ packages:
     resolution: {integrity: sha512-p7NKfJfVJgc5TSfprjwcvMEsGgt5Vvp6lc/nCgmoQRtaOzdKHmkMey2C72Igj6ntkUj0SFyZOp8LJOrEo8U1bA==}
     engines: {node: ^20.12 || >=22.11}
 
-  '@fontsource-variable/roboto-flex@5.1.0':
-    resolution: {integrity: sha512-TwH8+uOwBqIjxtvTc+kp7ywyH7V7bDLbAXrEQg2SoCTJ6m2pn00x7ULioTTzDEvek+XpbqIf8gbKE1zlcONNGg==}
+  '@fontsource-variable/montserrat@5.1.0':
+    resolution: {integrity: sha512-1bloVBKJx/ABBmF+/VzhJZDLzaDNUxw/8Pt5AOgfKL6N3t1fAhwtJBb1gdqU7ABckSNLsKf572A5Inv9YneRug==}
 
-  '@fontsource-variable/roboto-mono@5.1.0':
-    resolution: {integrity: sha512-87USlDpEi7dS/ayPXwf/08vdgJKEYxdQmuZk5kCzWBtumimdwWlA9Vh36TCtYqFC+dGgDxPX/4PJK+0lxkEd5A==}
+  '@fontsource-variable/mulish@5.1.0':
+    resolution: {integrity: sha512-ruMyFi0klNO3ILhkPDKxgNiXg0IxdZnqI5pVQ4MvJx9MdV9+aFKDRK9Cn6eOwz5YmDMeFmAZQBJkVEyyXM78jg==}
 
   '@gulpjs/messages@1.1.0':
     resolution: {integrity: sha512-Ys9sazDatyTgZVb4xPlDufLweJ/Os2uHWOv+Caxvy2O85JcnT4M3vc73bi8pdLWlv3fdWQz3pdI9tVwo8rQQSg==}
@@ -2584,9 +2584,9 @@ snapshots:
 
   '@firefoxic/utils@1.0.0': {}
 
-  '@fontsource-variable/roboto-flex@5.1.0': {}
+  '@fontsource-variable/montserrat@5.1.0': {}
 
-  '@fontsource-variable/roboto-mono@5.1.0': {}
+  '@fontsource-variable/mulish@5.1.0': {}
 
   '@gulpjs/messages@1.1.0': {}
 
