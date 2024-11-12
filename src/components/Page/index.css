@@ -1,19 +1,25 @@
 @property --ContentIndent-Min {
 	syntax: "<integer>";
 	inherits: false;
-	initial-value: 20;
+	initial-value: 15;
 }
 
 @property --ContentIndent-Max {
 	syntax: "<integer>";
 	inherits: false;
-	initial-value: 40;
+	initial-value: 100;
 }
 
-@property --ContentIndent {
-	syntax: "<length>";
-	inherits: true;
-	initial-value: 1rem;
+@property --Breakpoint-Min {
+	syntax: "<integer>";
+	inherits: false;
+	initial-value: 360;
+}
+
+@property --Breakpoint-Max {
+	syntax: "<integer>";
+	inherits: false;
+	initial-value: 1920;
 }
 
 .Page {
@@ -44,11 +50,6 @@
 }
 
 .Page-Header {
-	display: block grid;
-	grid: var(--Page-Grid);
-}
-
-.Page-Footer {
 	display: block grid;
 	grid: var(--Page-Grid);
 }
