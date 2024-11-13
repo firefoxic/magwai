@@ -36,6 +36,8 @@
 }
 
 .PostList-Item {
+	display: block grid;
+
 	&::marker {
 		color: transparent;
 	}

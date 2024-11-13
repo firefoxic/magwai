@@ -1,0 +1,78 @@
+.PostPreview {
+	display: block grid;
+	grid-template-rows: auto 1fr;
+	color-scheme: light;
+	color: var(--ColorUI-Text);
+	background-color: var(--ColorUI-BG);
+}
+
+.PostPreview-Image {
+	order: -1;
+	inline-size: 100%;
+	block-size: 185px;
+	object-fit: cover;
+}
+
+.PostPreview-Text {
+	display: block grid;
+	grid-template-rows: auto min-content 1fr;
+	gap: 20px;
+	padding: 24px 25px;
+}
+
+.PostPreview-Category {
+	order: -1;
+	margin-block: 0;
+	font-family: var(--FontAccent-Family);
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 26px;
+	text-transform: uppercase;
+	color: var(--ColorUI-Text_is-secondary);
+}
+
+.PostPreview-Title {
+	margin-block: 0;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 26px;
+	color: var(--ColorUI-Text_is-secondary);
+
+	&::first-letter {
+		text-transform: uppercase;
+	}
+}
+
+.PostPreview-Body {
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 26px;
+	color: var(--ColorUI-Text);
+
+	&::first-letter {
+		text-transform: uppercase;
+	}
+}
+
+.PostPreview-Meta {
+	margin: 0;
+	margin-block-start: auto;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 26px;
+	color: var(--ColorUI-Text_is-secondary);
+}
+
+.PostPreview-Author {
+	font-weight: 700;
+}
+
+.PostPreview-Button {
+	margin-block: 5px;
+	font-family: var(--FontAccent-Family);
+	font-weight: 600;
+	font-size: 14px;
+	line-height: normal;
+	color: var(--ColorUI-BG);
+	background-color: var(--ColorUI-BG_is-secondary);
+}

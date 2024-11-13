@@ -8,6 +8,12 @@ let users = [
 		name: `Eugenia`,
 	},
 ]
+let categories = [
+	`bridge`,
+	`water`,
+	`forest`,
+	`nature`,
+]
 
 let postListContainer = document.querySelector(`.PostList-Container`)
 let loadMoreButton = document.querySelector(`.PostList-LoadMoreButton`)
@@ -54,8 +60,11 @@ function addPostToDOM (post) {
 
 	let userName = users.find((user) => user.id === post.userId)?.name
 
+	let category = categories[Math.floor(Math.random() * (categories.length + 1))]
+
 	postElement.querySelector(`.PostPreview-Title`).textContent = post.title
 	postElement.querySelector(`.PostPreview-Body`).textContent = post.body
+	postElement.querySelector(`.PostPreview-Category`).textContent = category || ` `
 	postElement.querySelector(`.PostPreview-Author`).textContent = userName
 
 	let imageContainer = postElement.querySelector(`.PostPreview`)
