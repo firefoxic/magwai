@@ -1,0 +1,86 @@
+.Button {
+	display: block flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.5em;
+	padding: 16px 32px;
+	border: none;
+	background: var(--colorUI-BG_is-secondary);
+	color: var(--colorUI-Text_is-secondary);
+	font-family: var(--FontAccent-Family);
+	font-size: 14px;
+	font-weight: 700;
+	text-decoration: none;
+	isolation: isolate;
+}
+
+.Button_has-no-text {
+	color: var(--colorUI-Text);
+}
+
+.Button_has-icon {
+	padding: 14px 21px;
+
+	&::before {
+		content: "";
+		display: block flow-root;
+		inline-size: 32px;
+		block-size: 32px;
+		background: currentcolor;
+		mask: var(--Icon) no-repeat center / 24px 24px;
+	}
+}
+
+.Button_is-dimmed {
+	position: relative;
+	color: color-mix(in srgb, var(--ColorUI-Text), transparent 40%);
+	background: transparent;
+
+	&::after {
+		content: "";
+		position: absolute;
+		inset: 0;
+		z-index: -1;
+		display: block flow-root;
+		border: 1px solid currentcolor;
+		transform: skewX(-20deg);
+	}
+}
+
+.Button_is-cto {
+	position: relative;
+	font-family: var(--FontMain-Family);
+	font-size: 12px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: var(--ColorUI-Text);
+	background: transparent;
+
+	&::before {
+		content: "";
+		position: absolute;
+		inset-block: 0;
+		inset-inline-end: -10px;
+		inline-size: 5px;
+		z-index: 1;
+		display: block flow-root;
+		background: var(--ColorUI-Text);
+		transform: skewX(-20deg);
+		pointer-events: none;
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		inset: 0;
+		z-index: -1;
+		display: block flow-root;
+		background: var(--ColorUI-Accent);
+		transform: skewX(-20deg);
+	}
+}
+
+.Button-Text_is-hidden {
+	position: absolute;
+	scale: 0;
+}

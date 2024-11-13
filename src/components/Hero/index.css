@@ -63,6 +63,19 @@
 	}
 }
 
+.Hero-Button {
+	justify-self: start;
+	padding-inline: 38px;
+	padding-block: 15px;
+	margin-inline: 8px;
+
+	@media (--not-small) {
+		padding-inline: 68px;
+		padding-block: 21px;
+		margin-inline: 10px;
+	}
+}
+
 .Hero-Image {
 	grid-area: image;
 	display: block flow-root;
