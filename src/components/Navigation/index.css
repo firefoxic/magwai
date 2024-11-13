@@ -33,16 +33,17 @@
 			align-self: center;
 			padding: 0;
 			border: none;
-			background: var(--ColorUI-BG);
+			background: transparent;
+			transition: filter 0.2s, opacity 0.1s;
 
 			&:hover {
 				@media (hover: hover) {
-					--shadow-alpha: 0.5;
+					filter: drop-shadow(2px 2px 10px var(--ColorUI-Accent));
 				}
 			}
 
 			&:active {
-				--shadow-alpha: 0;
+				opacity: 0.7;
 			}
 		}
 	}
@@ -152,6 +153,7 @@
 	line-height: 1.5;
 	text-transform: uppercase;
 	text-decoration: none;
+	transition: color 0.1s, opacity 0.1s;
 
 	@media (--not-large) {
 		color: transparent;
@@ -170,6 +172,16 @@
 	&[aria-current="page"] {
 		text-decoration: underline;
 		text-underline-offset: 0.3em;
+	}
+
+	&:hover {
+		@media (hover: hover) {
+			color: var(--ColorUI-Accent);
+		}
+	}
+
+	&:active {
+		opacity: 0.5;
 	}
 }
 

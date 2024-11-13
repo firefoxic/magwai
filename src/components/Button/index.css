@@ -12,6 +12,17 @@
 	font-weight: 700;
 	text-decoration: none;
 	isolation: isolate;
+	transition: background 0.2s, opacity 0.1s;
+
+	&:hover {
+		@media (hover: hover) {
+			background: var(--ColorUI-Accent);
+		}
+	}
+
+	&:active {
+		opacity: 0.7;
+	}
 }
 
 .Button_has-no-text {
@@ -33,13 +44,26 @@
 
 .Button_is-dimmed {
 	position: relative;
-	color: color-mix(in srgb, var(--ColorUI-Text), transparent 40%);
+	color: var(--ColorText, color-mix(in srgb, var(--ColorUI-Text), transparent 40%));
 	background: transparent;
+	transition: color 0.2s, opacity 0.1s;
 
 	&:focus-visible {
 		outline: none;
 		--Outline: 2px solid var(--ColorUI-Accent);
 		--OutlineOffset: 2px;
+	}
+
+	&:hover {
+		@media (hover: hover) {
+			background: transparent;
+			--ColorText: var(--ColorUI-Text);
+			--ColorBG: var(--ColorUI-Accent);
+		}
+	}
+
+	&:active {
+		opacity: 0.7;
 	}
 
 	&::after {
@@ -49,9 +73,11 @@
 		z-index: -1;
 		display: block flow-root;
 		border: 1px solid currentcolor;
+		background-color: var(--ColorBG, transparent);
 		transform: skewX(-20deg);
 		outline: var(--Outline);
 		outline-offset: var(--OutlineOffset);
+		transition: background-color 0.2s;
 	}
 }
 
@@ -63,11 +89,23 @@
 	text-transform: uppercase;
 	color: var(--ColorUI-Text);
 	background: transparent;
+	transition: filter 0.2s, opacity 0.1s;
 
 	&:focus-visible {
 		outline: none;
 		--Outline: 2px solid var(--ColorUI-Accent);
 		--OutlineOffset: 2px;
+	}
+
+	&:hover {
+		@media (hover: hover) {
+			background: transparent;
+			filter: drop-shadow(2px 2px 15px var(--ColorUI-Accent));
+		}
+	}
+
+	&:active {
+		opacity: 0.7;
 	}
 
 	&::before {

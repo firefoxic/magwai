@@ -1,6 +1,17 @@
 .Logo-Link {
 	display: block flow-root;
 	font-family: var(--FontAccent-Family);
+	transition: filter 0.2s, opacity 0.2s;
+
+	&:hover {
+		@media (hover: hover) {
+			filter: drop-shadow(2px 2px 15px var(--ColorUI-Accent));
+		}
+	}
+
+	&:active {
+		opacity: 0.5;
+	}
 }
 
 .Logo-Image {
