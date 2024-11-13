@@ -36,6 +36,12 @@
 	color: color-mix(in srgb, var(--ColorUI-Text), transparent 40%);
 	background: transparent;
 
+	&:focus-visible {
+		outline: none;
+		--Outline: 2px solid var(--ColorUI-Accent);
+		--OutlineOffset: 2px;
+	}
+
 	&::after {
 		content: "";
 		position: absolute;
@@ -44,6 +50,8 @@
 		display: block flow-root;
 		border: 1px solid currentcolor;
 		transform: skewX(-20deg);
+		outline: var(--Outline);
+		outline-offset: var(--OutlineOffset);
 	}
 }
 
@@ -55,6 +63,12 @@
 	text-transform: uppercase;
 	color: var(--ColorUI-Text);
 	background: transparent;
+
+	&:focus-visible {
+		outline: none;
+		--Outline: 2px solid var(--ColorUI-Accent);
+		--OutlineOffset: 2px;
+	}
 
 	&::before {
 		content: "";
@@ -77,6 +91,8 @@
 		display: block flow-root;
 		background: var(--ColorUI-Accent);
 		transform: skewX(-20deg);
+		outline: var(--Outline);
+		outline-offset: var(--OutlineOffset);
 	}
 }
 
