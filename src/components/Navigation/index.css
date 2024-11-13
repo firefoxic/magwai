@@ -105,8 +105,9 @@
 		position: absolute;
 		inset-block-start: 100%;
 		inset-inline: 0;
-		margin: 0;
-		padding-block: 80px;
+		margin-inline: 0;
+		margin-block: 20px;
+		padding-block: 60px;
 		display: var(--Navigation_is-open);
 		background: var(--ColorUI-BG);
 		box-shadow:
