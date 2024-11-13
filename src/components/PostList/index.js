@@ -19,6 +19,8 @@ let postListContainer = document.querySelector(`.PostList-Container`)
 let loadMoreButton = document.querySelector(`.PostList-LoadMoreButton`)
 let template = document.getElementById(`post-preview-template`)
 
+let projectRoot = template.getAttribute(`data-project-root`)
+
 /**
  * Adds a "load more" button to the page and loads the first page of post
  * previews. When the button is clicked, loads the next page of post previews.
@@ -83,7 +85,7 @@ function generatePictureElement (id) {
 	let picture = document.createElement(`picture`)
 	let source = document.createElement(`source`)
 
-	source.srcset = `/shared/images/image${id}@2x.avif 2x, /shared/images/image${id}@1x.avif`
+	source.srcset = `${projectRoot}/shared/images/image${id}@2x.avif 2x, ${projectRoot}/shared/images/image${id}@1x.avif`
 	source.type = `image/avif`
 	source.width = 640
 	source.height = 360
@@ -92,8 +94,8 @@ function generatePictureElement (id) {
 	let img = document.createElement(`img`)
 
 	img.classList.add(`PostPreview-Image`)
-	img.src = `/shared/images/image${id}@1x.webp`
-	img.srcset = `/shared/images/image${id}@2x.webp 2x`
+	img.src = `${projectRoot}/shared/images/image${id}@1x.webp`
+	img.srcset = `${projectRoot}/shared/images/image${id}@2x.webp 2x`
 	img.width = 640
 	img.height = 360
 	img.alt = ``

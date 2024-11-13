@@ -1,5 +1,5 @@
 {%- macro PostPreview(classes) -%}
-	<template id="post-preview-template">
+	<template id="post-preview-template" data-project-root="{{ project.root }}">
 		<li class="{{ classes }}">
 			<article class="PostPreview">
 				<div class="PostPreview-Text">
