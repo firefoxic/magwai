@@ -1,0 +1,56 @@
+.PostList {
+	display: block grid;
+	gap: 30px;
+	padding-block: 48px;
+
+	@media (--only-middle) {
+		gap: 40px;
+		padding-block: 44px 140px;
+	}
+
+	@media (--only-large) {
+		gap: 53px;
+		padding-block: 134px 240px;
+	}
+}
+
+.PostList-Title {
+	margin-block: 0;
+	font-size: 20px;
+	font-weight: 700;
+
+	@media (--not-small) {
+		font-size: 42px;
+	}
+}
+
+.PostList-Container {
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 20px;
+	display: block grid;
+	padding-inline: 0;
+
+	@media (--only-large) {
+		gap: 30px;
+	}
+}
+
+.PostList-Item {
+	&::marker {
+		color: transparent;
+	}
+}
+
+.PostList-LoadMoreButton {
+	justify-self: center;
+	margin-block: 8px;
+	padding: 21px 78px;
+
+	@media (--not-small) {
+		margin-block: 16px;
+	}
+
+	@media (--only-large) {
+		margin-block-start: 7px;
+	}
+}

@@ -1,0 +1,10 @@
+{%- from "../PostPreview/index.njk" import PostPreview with context -%}
+
+{% macro PostList(classes, centererClass) %}
+	<section class="{{ classes }} {{ centererClass }} PostList">
+		<h2 class="PostList-Title">Карточки</h2>
+		<ul class="PostList-Container" id="posts"></ul>
+		<a class="PostList-LoadMoreButton Button Button_is-cto Button_is-decorated" id="loadMore" href="javascript:void(0)">Загрузить ещё</a>
+		{{ PostPreview("PostList-Item") }}
+	</section>
+{% endmacro %}

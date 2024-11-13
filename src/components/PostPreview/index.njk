@@ -1,0 +1,17 @@
+{%- macro PostPreview(classes) -%}
+	<template id="post-preview-template">
+		<li class="{{ classes }}">
+			<article class="PostPreview">
+				<div class="PostPreview-Text">
+					<h2 class="PostPreview-Title"></h2>
+					<div class="PostPreview-Body"></div>
+					<p class="PostPreview-Meta">
+						Posted by <span class="PostPreview-Author"></span>,
+						on <time datetime="2019-07-24">July 24, 2019</time>
+					</p>
+					<a class="PostPreview-Button Button" href="javascript:void(0)">Continue reading</a>
+				</div>
+			</article>
+		</li>
+	</template>
+{%- endmacro -%}

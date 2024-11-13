@@ -2,6 +2,7 @@
 
 {% from "./components/Picture/index.njk" import Picture with context %}
 {% from "./components/Hero/index.njk" import Hero with context %}
+{% from "./components/PostList/index.njk" import PostList with context %}
 
 {% set page = {
 	title: "Главная страница",
@@ -13,5 +14,7 @@
 	<h1 class="Heading Heading_is-hidden">{{ page.title }}</h1>
 
 	{{ Hero ("", "Page-Centerer") }}
+
+	{{ PostList ("", "Page-Centerer") }}
 
 {% endblock Content %}
