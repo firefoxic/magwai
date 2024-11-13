@@ -7,6 +7,14 @@ let users = [
 		id: 1,
 		name: `Eugenia`,
 	},
+	{
+		id: 2,
+		name: `Alexandra`,
+	},
+	{
+		id: 3,
+		name: `Natalia`,
+	},
 ]
 let categories = [
 	`bridge`,
