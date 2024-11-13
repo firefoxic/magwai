@@ -37,17 +37,13 @@ export function loadPostPreviews () {
  * If all posts have already been loaded, hides the load more button.
  */
 async function loadPosts () {
-	if ((page - 1) * POSTS_PER_PAGE >= MAX_POST_COUNT) {
-		loadMoreButton.style.display = `none`
-
-		return
-	}
-
 	let response = await fetch(`https://jsonplaceholder.typicode.com/posts?_page=${page}&_limit=${POSTS_PER_PAGE}`)
 	let posts = await response.json()
 
 	posts.forEach(addPostToDOM)
 	page++
+
+	if ((page - 1) * POSTS_PER_PAGE >= MAX_POST_COUNT) loadMoreButton.style.display = `none`
 }
 
 /**
