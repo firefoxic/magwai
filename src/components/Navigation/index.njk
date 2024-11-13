@@ -1,27 +1,37 @@
 {%- macro Navigation(classes) -%}
-	{% set blockClassName = "Navigation" %}
-	<nav class="{{ classes }} {{ blockClassName }}">
-		<h2 class="{{ blockClassName }}-Title">Main navigation</h2>
+	<div class="{{ classes }} Navigation">
 		<button
-			class="{{ blockClassName }}-Button Button"
+			class="Navigation-Button"
 			type="button"
 			aria-controls="Navigation-List"
 			hidden
 		>
-			<span class="{{ blockClassName }}-ButtonText">Toggle navigation list</span>
+			<span class="Navigation-ButtonText">Toggle navigation list</span>
 		</button>
-
-		<ul class="{{ blockClassName }}-List " id="Navigation-List">
-			{% for link in navLinks %}
-				{%- set linkUrl = project.root ~ link.rootUrl -%}
-				<li class="{{ blockClassName }}-Item">
-					<a
-						class="{{ blockClassName }}-Link"
-						href="{{ linkUrl }}"
-						{{ "aria-current=page" if linkUrl === page.link -}}
-					>{{ link.text }}</a>
-				</li>
-			{% endfor %}
-		</ul>
-	</nav>
+		<div class="Navigation-Wrapper" id="Navigation-List">
+			<nav class="Navigation-List">
+				<h2 class="Navigation-Title">Main navigation</h2>
+				<ul class="Navigation-Items">
+					{% for link in navLinks %}
+						{%- set linkUrl = project.root ~ link.rootUrl -%}
+						<li class="Navigation-Item">
+							<a
+								class="Navigation-Link"
+								href="{{ linkUrl }}"
+								{{ "aria-current=page" if linkUrl === page.link -}}
+							>{{ link.text }}</a>
+						</li>
+					{% endfor %}
+				</ul>
+			</nav>
+			<div class="Navigation-Buttons">
+				<a class="Button Button_is-dimmed Button_has-icon" href="javascript:void(0)" style="--Icon: var(--Icon_shape_phone)">
+					<span class="Button-Text Button-Text_is-hidden">Заказать звонок</span>
+				</a>
+				<a class="Button Button_is-cto Button_is-decorated" href="javascript:void(0)">
+					<span class="Button-Text">Оставить заявку</span>
+				</a>
+			</div>
+		</div>
+	</div>
 {%- endmacro -%}

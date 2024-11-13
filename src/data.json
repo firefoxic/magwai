@@ -1,12 +1,32 @@
 {
 	"navLinks": [
 		{
-			"text": "Main page",
-			"rootUrl": "/"
+			"text": "Услуги",
+			"rootUrl": "/services"
 		},
 		{
-			"text": "Lost page",
-			"rootUrl": "/lost"
+			"text": "Абонементы",
+			"rootUrl": "/abonements"
+		},
+		{
+			"text": "Почему мы",
+			"rootUrl": "/why-us"
+		},
+		{
+			"text": "Оборудование",
+			"rootUrl": "/equipment"
+		},
+		{
+			"text": "Акции",
+			"rootUrl": "/sales"
+		},
+		{
+			"text": "FAQ",
+			"rootUrl": "/faq"
+		},
+		{
+			"text": "Контакты",
+			"rootUrl": "/contacts"
 		}
 	]
 }

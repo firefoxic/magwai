@@ -1,5 +1,11 @@
+{%- from "../Logo/index.njk" import Logo with context -%}
+{%- from "../Navigation/index.njk" import Navigation with context -%}
+
 {%- macro Header(classes) -%}
 	<header class="{{ classes }} Header">
-		{{ caller() }}
+		<div class="Page-Centerer Header-Container">
+			{{ Logo("Header-Logo") }}
+			{{ Navigation("Header-Navigation") }}
+		</div>
 	</header>
 {%- endmacro -%}

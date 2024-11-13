@@ -3,12 +3,13 @@
 	--ColorPalette-Gray_l_02046: #171717;
 	--ColorPalette-Gray_l_05103: #666666;
 	--ColorPalette-Gray_l_05999: #808080;
-	--ColorPalette-Gray_l_08475: #cccdcd;
 	--ColorPalette-White: #ffffff;
 	--ColorPalette-Beige: #c2ab81;
 
 	--ColorUI-BG: light-dark(var(--ColorPalette-White), var(--ColorPalette-Gray_l_01867));
 	--ColorUI-Text: light-dark(var(--ColorPalette-Gray_l_05103), var(--ColorPalette-White));
+	--ColorUI-BG_is-secondary: light-dark(var(--ColorPalette-Gray_l_02046), var(--ColorPalette-White));
+	--ColorUI-Text_is-secondary: light-dark(var(--ColorPalette-Gray_l_02046), var(--ColorPalette-Gray_l_05999));
 
 	--ColorUI-Accent: var(--ColorPalette-Beige);
 

@@ -1,13 +1,42 @@
 .Header {
-	background: var(--ColorUI-BG_special);
+	background: var(--ColorUI-BG);
+	padding-block: 15px;
 
 	@media (--not-small) {
 		box-sizing: border-box;
+		padding-block: 30px;
+	}
+
+	@media (--only-large) {
+		padding-block: 28px;
 	}
 }
 
 .Header-Container {
 	display: block flex;
-	justify-content: space-between;
-	align-items: center;
+
+	@media (--not-large) {
+		position: relative;
+	}
+
+	@media (--not-small) {
+		gap: 76px;
+		justify-content: space-between;
+	}
+}
+
+.Header-Logo {
+	@media (--only-small) {
+		margin-inline-start: auto;
+	}
+}
+
+.Header-Navigation {
+	@media (--not-large) {
+		order: -1;
+	}
+
+	@media (--only-large) {
+		align-self: center;
+	}
 }

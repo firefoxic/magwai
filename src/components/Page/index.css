@@ -50,6 +50,7 @@
 }
 
 .Page-Header {
+	z-index: 2;
 	display: block grid;
 	grid: var(--Page-Grid);
 }
