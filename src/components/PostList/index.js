@@ -27,13 +27,13 @@ let postListContainer = document.querySelector(`.PostList-Container`)
 let loadMoreButton = document.querySelector(`.PostList-LoadMoreButton`)
 let template = document.getElementById(`post-preview-template`)
 
-let projectRoot = template.getAttribute(`data-project-root`)
-
 /**
  * Adds a "load more" button to the page and loads the first page of post
  * previews. When the button is clicked, loads the next page of post previews.
  */
 export function loadPostPreviews () {
+	if (postListContainer === null || loadMoreButton === null || template === null) return
+
 	loadMoreButton.addEventListener(`click`, (event) => {
 		event.preventDefault()
 		loadPosts()
@@ -92,6 +92,7 @@ function generatePictureElement (id) {
 
 	let picture = document.createElement(`picture`)
 	let source = document.createElement(`source`)
+	let projectRoot = template.getAttribute(`data-project-root`)
 
 	source.srcset = `${projectRoot}/shared/images/image${id}@2x.avif 2x, ${projectRoot}/shared/images/image${id}@1x.avif`
 	source.type = `image/avif`
